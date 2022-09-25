@@ -17,6 +17,7 @@ function Navbar() {
         {nav.map(({ title, Icon, path, subsetNav, subNav }, i) => (
           <div className="flex   cursor-pointer ">
             <motion.div
+            key={i}
               onMouseEnter={() => {
                 setShowSub(true)
                 setsubMenu(title)
@@ -37,6 +38,7 @@ function Navbar() {
               // no of subnav cards
               // the whole card
               <motion.div
+            
                 initial={{ x: 0, y: 50, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -60,7 +62,9 @@ function Navbar() {
                     showSub &&
                     subMenu === title &&
                     subNav?.map((sN, i1) => (
-                      <div className=" grid grid-cols-3">
+                      <div 
+                      key={i1}
+                      className=" grid grid-cols-3">
                         {i1 > 0 && (
                           <div className="w-[1px] h-full bg-gray-400 ml-2" />
                         )}
@@ -72,7 +76,9 @@ function Navbar() {
                           </h3>
 
                           {sN.subsetNav?.map((sN2, i2) => (
-                            <div className="flex flex-col gap-3 ">
+                            <div
+                            key={i2}
+                            className="flex flex-col gap-3 ">
                               <h4 className="text-gray-600">{sN2.title}</h4>
                             </div>
                           ))}
