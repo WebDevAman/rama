@@ -8,29 +8,26 @@ function Navbar() {
   const [subMenu, setsubMenu] = useState('')
 
   return (
-    <div className="flex justify-between px-10 py-3  relative container transition-all ease-in-out">
+    <div className="flex justify-between px-10 py-3 z-[99] relative container transition-all ease-in-out">
       <div>
         <h1 className="font-poppins font-bold text-2xl">Example</h1>
       </div>
 
-      <div className="hidden md:flex items-center space-x-6  mr-10">
+      <div className="hidden md:flex items-center  space-x-6  mr-10">
         {nav.map(({ title, Icon, path, subsetNav, subNav }, i) => (
-          <div className="flex   cursor-pointer "
-          key={i}
-          >
+          <div className="flex   cursor-pointer " key={i}>
             <motion.div
-          
               onMouseEnter={() => {
                 setShowSub(true)
                 setsubMenu(title)
               }}
               onMouseLeave={() => {
-                setShowSub(false)
-                setsubMenu('')
+                // setShowSub(false)
+                // setsubMenu('')
               }}
-              className="flex items-center space-x-1"
+              className="flex items-center space-x-1 "
             >
-              <div className="flex items-center hover:bg-gray-100 px-2 py-1 rounded-full">
+              <div className="flex items-center hover:bg-gray-100 px-4 py-1 rounded-full">
                 <h3 className="text-md font-semibold text-gray-700">{title}</h3>
                 {Icon && <Icon className="text-xl" />}
               </div>
@@ -40,7 +37,6 @@ function Navbar() {
               // no of subnav cards
               // the whole card
               <motion.div
-            
                 initial={{ x: 0, y: 50, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -52,8 +48,7 @@ function Navbar() {
                   setShowSub(false)
                   setsubMenu('')
                 }}
-                
-                className="bg-white flex flex-row top-12 border-t-4 border-purple-700 rounded-t-lg space-x-5  absolute right-5 lg:right-10  py-4 px-3  shadow-md w-[900px] h-auto"
+                className="bg-white  flex items-center  flex-row top-14 border-t-4 border-gray-900 rounded-t-lg space-x-5  absolute right-5 lg:right-10  py-4 px-3  shadow-md w-[900px] "
               >
                 <div className="relative aspect-video flex-[0.3] w-full h-full">
                   <Image src="/images/house.jpg" layout="fill" />
@@ -64,9 +59,7 @@ function Navbar() {
                     showSub &&
                     subMenu === title &&
                     subNav?.map((sN, i1) => (
-                      <div 
-                      key={i1}
-                      className=" grid grid-cols-3">
+                      <div key={i1} className=" grid grid-cols-3">
                         {i1 > 0 && (
                           <div className="w-[1px] h-full bg-gray-400 ml-2" />
                         )}
@@ -79,8 +72,9 @@ function Navbar() {
 
                           {sN.subsetNav?.map((sN2, i2) => (
                             <div
-                            key={i2}
-                            className="flex flex-col gap-3 ">
+                              key={i2}
+                              className="flex flex-col gap-3 hover:underline decoration-purple-500"
+                            >
                               <h4 className="text-gray-600">{sN2.title}</h4>
                             </div>
                           ))}

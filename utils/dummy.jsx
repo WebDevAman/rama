@@ -72,6 +72,28 @@ export const nav = [
           },
         ],
       },
+      {
+        title: 'Example',
+        path: '',
+        subsetNav: [
+          {
+            title: 'example',
+            path: '',
+          },
+          {
+            title: 'example',
+            path: '',
+          },
+          {
+            title: 'example',
+            path: '',
+          },
+          {
+            title: 'example',
+            path: '',
+          },
+        ],
+      },
     ],
   },
   {
@@ -97,6 +119,28 @@ export const nav = [
           },
           {
             title: 'example2',
+            path: '',
+          },
+        ],
+      },
+      {
+        title: 'Example',
+        path: '',
+        subsetNav: [
+          {
+            title: 'example',
+            path: '',
+          },
+          {
+            title: 'example',
+            path: '',
+          },
+          {
+            title: 'example',
+            path: '',
+          },
+          {
+            title: 'example',
             path: '',
           },
         ],

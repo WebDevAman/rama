@@ -7,6 +7,35 @@
 
 @layer components{
     .container{
-        @apply max-w-[70rem] mx-auto 
+        @apply max-w-[80rem] !w-full mx-auto !important;
     }
 }
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 25px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    padding: 40px 20px !important;
+    background-color: white!important;
+    color: black !important;
+}
+
+@media (max-width:600px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        opacity: 0 !important;
+    }
+}
+
+.swiper-button-next {
+    right: 0 !important;
+}
+
+.swiper-button-prev {
+    left: 0 !important;
+}
+  
