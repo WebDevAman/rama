@@ -15,9 +15,11 @@ function Navbar() {
 
       <div className="hidden md:flex items-center space-x-6  mr-10">
         {nav.map(({ title, Icon, path, subsetNav, subNav }, i) => (
-          <div className="flex   cursor-pointer ">
+          <div className="flex   cursor-pointer "
+          key={i}
+          >
             <motion.div
-            key={i}
+          
               onMouseEnter={() => {
                 setShowSub(true)
                 setsubMenu(title)
