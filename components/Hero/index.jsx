@@ -63,7 +63,7 @@ const Hero = () => {
     }
     return (
         <motion.div
-            className='h-screen  overflow-hidden z-0 !transition-all !ease-in-out !duration-300'
+            className='!h-screen  overflow-hidden z-0 !transition-all !ease-in-out !duration-300'
             initial="hidden"
             animate="visible"
             transition={{
@@ -85,6 +85,7 @@ const Hero = () => {
                   clickable: true,
                 }}
                 modules={[EffectFade, Navigation, Pagination]}
+className='!h-screen'
 
             >
               
