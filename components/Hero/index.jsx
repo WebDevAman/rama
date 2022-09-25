@@ -95,7 +95,7 @@ const Hero = () => {
                             style={{
                                 backgroundImage: `linear-gradient(rgba(1,1,1,0.2),rgba(1,1,1,0.2) ), url(${"/images/house.jpg"})`
                             }}
-                            className='!bg-cover flex items-center justify-center !bg-center !bg-fixed h-[90vh] md:h-[80vh]'
+                            className='!bg-cover flex items-center justify-center h-full'
                         >
                             <div className="flex text-center flex-col space-y-4 lg:space-y-8">
                                 <h1
@@ -133,7 +133,7 @@ const Hero = () => {
                             style={{
                                 backgroundImage: `linear-gradient(rgba(1,1,1,0.2),rgba(1,1,1,0.2) ), url(${"/images/commercial.jpg"})`
                             }}
-                            className='!bg-cover flex items-center justify-center !bg-center !bg-fixed'
+                            className='!bg-cover h-full flex items-center justify-center'
                         >
                             <div className="flex text-center flex-col space-y-4 lg:space-y-8">
                                 <h1
