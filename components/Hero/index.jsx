@@ -63,7 +63,7 @@ const Hero = () => {
     }
     return (
         <motion.div
-            className='!h-screen  overflow-hidden z-0 !transition-all !ease-in-out !duration-300'
+            className='h-screen  overflow-hidden z-0 !transition-all !ease-in-out !duration-300'
             initial="hidden"
             animate="visible"
             transition={{
@@ -85,7 +85,6 @@ const Hero = () => {
                   clickable: true,
                 }}
                 modules={[EffectFade, Navigation, Pagination]}
-className='!h-screen'
 
             >
               
@@ -134,7 +133,7 @@ className='!h-screen'
                             style={{
                                 backgroundImage: `linear-gradient(rgba(1,1,1,0.2),rgba(1,1,1,0.2) ), url(${"/images/commercial.jpg"})`
                             }}
-                            className='!bg-cover flex items-center justify-center !bg-center !bg-fixed h-[90vh] md:h-[80vh]'
+                            className='!bg-cover flex items-center justify-center !bg-center !bg-fixed'
                         >
                             <div className="flex text-center flex-col space-y-4 lg:space-y-8">
                                 <h1
